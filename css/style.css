@@ -1,0 +1,11 @@
+body { 
+  background: #CBDBE0;
+  padding: 0;
+  margin: 0;
+}
+
+.implotting-canvas {
+  max-width: 1280px;
+  margin: 0 auto;
+    background: #000;
+}
