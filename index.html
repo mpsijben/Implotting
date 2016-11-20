@@ -10,7 +10,50 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="lib/implotting.js"></script>
     <script>
-        ImPlotting(900, 500);
+         headers = [];
+        headers.push(HeaderLabel("Week 1"));
+        headers.push(HeaderLabel("Week 2"));
+        headers.push(HeaderLabel("Week 3"));
+        headers.push(HeaderLabel("Week 4"));
+        headers.push(HeaderLabel("Week 5"));
+        headers.push(HeaderLabel("Week 6"));
+        headers.push(HeaderLabel("Week 7"));
+        headers.push(HeaderLabel("Week 8"));
+        headers.push(HeaderLabel("Week 9"));
+        headers.push(HeaderLabel("Week 10"));
+        headers.push(HeaderLabel("Week 11"));
+        headers.push(HeaderLabel("Week 12"));
+        headers.push(HeaderLabel("Week 13"));
+        headers.push(HeaderLabel("Week 14"));
+        headers.push(HeaderLabel("Week 15"));
+        headers.push(HeaderLabel("Week 16"));
+        verHeaders = [];
+        for (i=0; i<headers.length; i++) { 
+            verHeaders.push(HeaderLabel(headers[i].text()));
+        }
+        
+         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+       var height = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+        
+        var plot = ImPlotting(width, window.innerHeight);
+        unloadScrollBars();
+        
+        plot.addHeader(headerOrientationEnum.top);
+        plot.addHeader(headerOrientationEnum.left);
+        
+        plot.addHeaderData(headerOrientationEnum.top, headers);
+        plot.addHeaderData(headerOrientationEnum.left, verHeaders);
+        
+        plot.layout();
+        
+        
+        function unloadScrollBars() {
+            document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+            document.body.scroll = "no"; // ie only
+        }
     </script>
 </body>
 </html>

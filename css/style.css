@@ -5,14 +5,14 @@ body {
 }
 
 .implotting-canvas {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .implotting-canvas svg {
   background: #DBEBF0;
   max-width: 100%;
-  max-height: 768px;
+  max-height: 100%;
 }
 
 #textLength { 
