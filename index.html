@@ -17,6 +17,20 @@
         headers.push(HeaderLabel("Week 4"));
         headers.push(HeaderLabel("Week 5"));
         headers.push(HeaderLabel("Week 6"));
+        headers.push(HeaderLabel("Week 5"));
+        headers.push(HeaderLabel("Week 6"));
+        headers.push(HeaderLabel("Week 5"));
+        headers.push(HeaderLabel("Week 6"));
+        verHeaders = [];
+        for (i=0; i<headers.length; i++) { 
+            verHeaders.push(HeaderLabel(headers[i].text()));
+        }
+        headers.push(HeaderLabel("Week 1"));
+        headers.push(HeaderLabel("Week 2"));
+        headers.push(HeaderLabel("Week 3"));
+        headers.push(HeaderLabel("Week 4"));
+        headers.push(HeaderLabel("Week 5"));
+        headers.push(HeaderLabel("Week 6"));
         headers.push(HeaderLabel("Week 7"));
         headers.push(HeaderLabel("Week 8"));
         headers.push(HeaderLabel("Week 9"));
@@ -27,10 +41,23 @@
         headers.push(HeaderLabel("Week 14"));
         headers.push(HeaderLabel("Week 15"));
         headers.push(HeaderLabel("Week 16"));
-        verHeaders = [];
-        for (i=0; i<headers.length; i++) { 
-            verHeaders.push(HeaderLabel(headers[i].text()));
-        }
+        headers.push(HeaderLabel("Week 1"));
+        headers.push(HeaderLabel("Week 2"));
+        headers.push(HeaderLabel("Week 3"));
+        headers.push(HeaderLabel("Week 4"));
+        headers.push(HeaderLabel("Week 5"));
+        headers.push(HeaderLabel("Week 6"));
+        headers.push(HeaderLabel("Week 7"));
+        headers.push(HeaderLabel("Week 8"));
+        headers.push(HeaderLabel("Week 9"));
+        headers.push(HeaderLabel("Week 10"));
+        headers.push(HeaderLabel("Week 11"));
+        headers.push(HeaderLabel("Week 12"));
+        headers.push(HeaderLabel("Week 13"));
+        headers.push(HeaderLabel("Week 14"));
+        headers.push(HeaderLabel("Week 15"));
+        headers.push(HeaderLabel("Week 16"));
+        
         
          var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
        var height = window.innerHeight
@@ -43,6 +70,19 @@
         
         plot.addHeader(headerOrientationEnum.top);
         plot.addHeader(headerOrientationEnum.left);
+        
+        
+        node = {};
+        node.key = "Bav";
+        topHeaderKeys = [0,1,2,3,3, 4, 5, 6, 7, 9];
+        leftHeaderKey = [0,1,2,3,7, 4, 5, 6, 7, 9];
+        node.locations = plot.genLocationsDataset(topHeaderKeys, leftHeaderKey);
+        node.color = "DC143C";
+        node.value = "Bavaria";
+        
+        nodes = [];
+        nodes.push(node);
+        plot.addNodeData(nodes);
         
         plot.addHeaderData(headerOrientationEnum.top, headers);
         plot.addHeaderData(headerOrientationEnum.left, verHeaders);
