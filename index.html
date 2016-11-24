@@ -10,53 +10,7 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="lib/implotting.js"></script>
     <script>
-         headers = [];
-        headers.push(HeaderLabel("Week 1"));
-        headers.push(HeaderLabel("Week 2"));
-        headers.push(HeaderLabel("Week 3"));
-        headers.push(HeaderLabel("Week 4"));
-        headers.push(HeaderLabel("Week 5"));
-        headers.push(HeaderLabel("Week 6"));
-        headers.push(HeaderLabel("Week 5"));
-        headers.push(HeaderLabel("Week 6"));
-        headers.push(HeaderLabel("Week 5"));
-        headers.push(HeaderLabel("Week 6"));
-        verHeaders = [];
-        for (i=0; i<headers.length; i++) { 
-            verHeaders.push(HeaderLabel(headers[i].text()));
-        }
-        headers.push(HeaderLabel("Week 1"));
-        headers.push(HeaderLabel("Week 2"));
-        headers.push(HeaderLabel("Week 3"));
-        headers.push(HeaderLabel("Week 4"));
-        headers.push(HeaderLabel("Week 5"));
-        headers.push(HeaderLabel("Week 6"));
-        headers.push(HeaderLabel("Week 7"));
-        headers.push(HeaderLabel("Week 8"));
-        headers.push(HeaderLabel("Week 9"));
-        headers.push(HeaderLabel("Week 10"));
-        headers.push(HeaderLabel("Week 11"));
-        headers.push(HeaderLabel("Week 12"));
-        headers.push(HeaderLabel("Week 13"));
-        headers.push(HeaderLabel("Week 14"));
-        headers.push(HeaderLabel("Week 15"));
-        headers.push(HeaderLabel("Week 16"));
-        headers.push(HeaderLabel("Week 1"));
-        headers.push(HeaderLabel("Week 2"));
-        headers.push(HeaderLabel("Week 3"));
-        headers.push(HeaderLabel("Week 4"));
-        headers.push(HeaderLabel("Week 5"));
-        headers.push(HeaderLabel("Week 6"));
-        headers.push(HeaderLabel("Week 7"));
-        headers.push(HeaderLabel("Week 8"));
-        headers.push(HeaderLabel("Week 9"));
-        headers.push(HeaderLabel("Week 10"));
-        headers.push(HeaderLabel("Week 11"));
-        headers.push(HeaderLabel("Week 12"));
-        headers.push(HeaderLabel("Week 13"));
-        headers.push(HeaderLabel("Week 14"));
-        headers.push(HeaderLabel("Week 15"));
-        headers.push(HeaderLabel("Week 16"));
+         
         
         
          var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -84,8 +38,8 @@
         nodes.push(node);
         plot.addNodeData(nodes);
         
-        plot.addHeaderData(headerOrientationEnum.top, headers);
-        plot.addHeaderData(headerOrientationEnum.left, verHeaders);
+       // plot.addHeaderData(headerOrientationEnum.top, headers);
+     //   plot.addHeaderData(headerOrientationEnum.left, verHeaders);
         
         plot.layout();
         
