@@ -1,7 +1,7 @@
 # Implotting.js
 Implotting.js is a d3.js library for creating a XYplot (Alluvial-Style) diagram with SVG.
 
-***
+## License 
 
 If you distribute a copy or make a fork of the project, you have to credit this project as the source.
 
@@ -13,5 +13,5 @@ You should have received a copy of the GNU General Public License along with thi
 
 ***
 
-Implotting - Implotting.js is a d3.js library for creating a XYplot (Alluvial-Style) diagram with SVG.
+Implotting - Implotting.js is a d3.js library for creating a XYplot (Alluvial-Style) diagram with SVG.<br />
 Copyright © 2016  Menno Sijben - Released under the GPL v3 license.
