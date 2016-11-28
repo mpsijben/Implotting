@@ -18,36 +18,44 @@
         || document.documentElement.clientHeight
         || document.body.clientHeight;
 
+        var graph = new ImGraph(width, window.innerHeight);
         
-        var plot = ImPlotting(width, window.innerHeight);
-        unloadScrollBars();
+        graph.headerManager.addHeader(HeaderPos.ALL);
+
+        h = [];
+        h.push(new HeaderLabel("goodbye"));
+        h.push("goodbye");
         
-        plot.addHeader(headerOrientationEnum.top);
-        plot.addHeader(headerOrientationEnum.left);
+        k = [];
+        k.push(new HeaderLabel("werkt 1"));
+        k.push("wertk 2");
+        k.push("wertk 3");
         
+        graph.headerManager.addData(h, HeaderType.X);
+        graph.headerManager.addData(k, HeaderType.Y);
+
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.LEFT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.TOP);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.RIGHT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.BOTTOM);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.TOP, alignment:AlignHorizontal.RIGHT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.LEFT);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.TOP, alignment:AlignHorizontal.RIGHT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.RIGHT);
+    
+
+       // node = {};
+       // node.key = "Bav";
+        //topHeaderKeys = [0,1,2,3,3, 4, 5, 6, 7, 9];
+        //leftHeaderKey = [0,1,2,3,7, 4, 5, 6, 7, 9];
+        //node.locations = plot.genLocationsDataset(topHeaderKeys, leftHeaderKey);
+        //node.color = "DC143C";
+       // node.value = "Bavaria";
         
-        node = {};
-        node.key = "Bav";
-        topHeaderKeys = [0,1,2,3,3, 4, 5, 6, 7, 9];
-        leftHeaderKey = [0,1,2,3,7, 4, 5, 6, 7, 9];
-        node.locations = plot.genLocationsDataset(topHeaderKeys, leftHeaderKey);
-        node.color = "DC143C";
-        node.value = "Bavaria";
-        
-        nodes = [];
-        nodes.push(node);
-        plot.addNodeData(nodes);
+       // nodes = [];
+        //nodes.push(node);
+        //plot.addNodeData(nodes);
         
        // plot.addHeaderData(headerOrientationEnum.top, headers);
      //   plot.addHeaderData(headerOrientationEnum.left, verHeaders);
         
-        plot.layout();
-        
-        
-        function unloadScrollBars() {
-            document.documentElement.style.overflow = 'hidden';  // firefox, chrome
-            document.body.scroll = "no"; // ie only
-        }
+        graph.layout();
     </script>
 </body>
 </html>
