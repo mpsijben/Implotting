@@ -18,7 +18,7 @@
         || document.documentElement.clientHeight
         || document.body.clientHeight;
 
-        var graph = new ImGraph(400, 400);
+        var graph = new ImGraph(width, height);
         
         graph.headerManager.addHeader(HeaderPos.ALL);
 
@@ -39,7 +39,7 @@
         graph.headerManager.setSettings({verticalAlign:AlignVertical.TOP, alignment:AlignHorizontal.RIGHT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.LEFT);
         graph.headerManager.setSettings({verticalAlign:AlignVertical.TOP, alignment:AlignHorizontal.RIGHT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.RIGHT);
     
-        graph.setGlobalSettings({autoResize:{enable:true, type:RatioType.ASPECT, aspectRatio:{x:16, y:9}}});
+        graph.setGlobalSettings({autoResize:{enable:true, type:RatioType.ORIGIN, aspectRatio:{x:16, y:9}}});
        // node = {};
        // node.key = "Bav";
         //topHeaderKeys = [0,1,2,3,3, 4, 5, 6, 7, 9];
