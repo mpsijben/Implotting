@@ -25,21 +25,41 @@
         h = [];
         h.push(new HeaderLabel("goodbye"));
         h.push("goodbye");
+        h.push("Week 12");
+        h.push("Week 13");
         
         k = [];
         k.push(new HeaderLabel("werkt 1"));
-        k.push("wertk 2");
+        k.push("goodbye");
         k.push("wertk 3");
         
         graph.headerManager.addData(h, HeaderType.X);
         graph.headerManager.addData(k, HeaderType.Y);
 
-        graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.LEFT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.TOP);
-        graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.RIGHT, padding:{bottom:0, top:0, left:10, right:10}},HeaderPos.BOTTOM);
-        graph.headerManager.setSettings({verticalAlign:AlignVertical.TOP, alignment:AlignHorizontal.RIGHT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.LEFT);
-        graph.headerManager.setSettings({verticalAlign:AlignVertical.TOP, alignment:AlignHorizontal.RIGHT, padding:{bottom:0, top:0, left:0, right:0}},HeaderPos.RIGHT);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.TOP);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.BOTTOM);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.LEFT);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.RIGHT);
     
+       // graph.headerManager.setSettings({gridLine:{enable:false}},HeaderPos.TOP | HeaderPos.BOTTOM);
+        //graph.headerManager.setSettings({gridLine:{enable:false}},HeaderPos.LEFT | HeaderPos.RIGHT);
+        
         graph.setGlobalSettings({autoResize:{enable:true, type:RatioType.ORIGIN, aspectRatio:{x:16, y:9}}});
+
+
+        nodes = [];
+        nodes.push({id:"bav", name:"bavaria", xHeaderPos:0, yHeaderPos:0, color:"#00FF40"});
+        nodes.push({id:"bav", name:"bavaria", xHeaderPos:1, yHeaderPos:1, color:"#00FF40"});
+        nodes.push({id:"bav", name:"bavaria", xHeaderPos:3, yHeaderPos:2, color:"#00FF40"});
+
+        nodes.push({id:"bra", name:"brand", xHeaderPos:0, yHeaderPos:1, color:"#DF013A"});
+        nodes.push({id:"bra", name:"brand", xHeaderPos:1, yHeaderPos:1, color:"#DF013A"});
+        nodes.push({id:"bra", name:"brand", xHeaderPos:1, yHeaderPos:2, color:"#DF013A"});
+        nodes.push({id:"bra", name:"brand", xHeaderPos:2, yHeaderPos:0, color:"#DF013A"});
+
+        graph.nodeManager.addData(nodes);
+
+
        // node = {};
        // node.key = "Bav";
         //topHeaderKeys = [0,1,2,3,3, 4, 5, 6, 7, 9];
