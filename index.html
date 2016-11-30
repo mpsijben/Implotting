@@ -19,27 +19,30 @@
         || document.body.clientHeight;
 
         var graph = new ImGraph(width, height);
-        
+        alert(width);
         graph.headerManager.addHeader(HeaderPos.ALL);
 
         h = [];
-        h.push(new HeaderLabel("goodbye"));
-        h.push("goodbye");
-        h.push("Week 12");
-        h.push("Week 13");
+        h.push(new HeaderLabel("header"));
+        h.push("header");
+        h.push("header");
+        h.push("header");
         
         k = [];
-        k.push(new HeaderLabel("werkt 1"));
-        k.push("goodbye");
-        k.push("wertk 3");
+        k.push(new HeaderLabel("product"));
+        k.push("product");
+        k.push("product");
+        k.push("product");
+        k.push("product");
+        k.push("product");
         
         graph.headerManager.addData(h, HeaderType.X);
         graph.headerManager.addData(k, HeaderType.Y);
 
-        graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.TOP);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.LEFT},HeaderPos.TOP);
         graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.BOTTOM);
-        graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.LEFT);
-        graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.RIGHT);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.LEFT},HeaderPos.LEFT);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.LEFT},HeaderPos.RIGHT);
     
        // graph.headerManager.setSettings({gridLine:{enable:false}},HeaderPos.TOP | HeaderPos.BOTTOM);
         //graph.headerManager.setSettings({gridLine:{enable:false}},HeaderPos.LEFT | HeaderPos.RIGHT);
