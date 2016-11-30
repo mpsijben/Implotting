@@ -11,6 +11,7 @@ body {
 }
 
 .implotting-canvas svg {
+  display: block;
   background: #DBEBF0;
   max-width: 100%;
   max-height: 100%;

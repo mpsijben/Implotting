@@ -18,7 +18,7 @@
         || document.documentElement.clientHeight
         || document.body.clientHeight;
 
-        var graph = new ImGraph(width, height);
+        var graph = new ImGraph(width, height-1);
         alert(width);
         graph.headerManager.addHeader(HeaderPos.ALL);
 
@@ -41,7 +41,7 @@
 
         graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.LEFT},HeaderPos.TOP);
         graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.CENTER},HeaderPos.BOTTOM);
-        graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.LEFT},HeaderPos.LEFT);
+        graph.headerManager.setSettings({verticalAlign:AlignVertical.MIDDLE, alignment:AlignHorizontal.LEFT},HeaderPos.LEFT);
         graph.headerManager.setSettings({verticalAlign:AlignVertical.BOTTOM, alignment:AlignHorizontal.LEFT},HeaderPos.RIGHT);
     
        // graph.headerManager.setSettings({gridLine:{enable:false}},HeaderPos.TOP | HeaderPos.BOTTOM);
